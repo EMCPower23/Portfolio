@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evin McReynolds | Skills</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", Arial, sans-serif;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                  url("skillset.png") no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
+      color: #00bfff;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 40px;
+      margin-top: 40px;
+      padding: 0 40px;
+      width: 80%;
+      max-width: 800px;
+    }
+
+    .skill {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .skill img {
+      height: 100px;
+      width: 100px;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .skill:hover {
+      transform: translateY(-5px);
+    }
+
+    .skill img:hover {
+      transform: scale(1.1);
+    }
+
+    .skill p {
+      margin-top: 10px;
+      font-weight: 500;
+    }
+
+    nav {
+      margin-top: 60px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.1em;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00bfff;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #ccc;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2em;
+      }
+      .skills-grid {
+        gap: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>My Skill Set</h1>
+    <p>Technologies & tools I use to bring designs to life.</p>
+  </header>
+
+  <section class="skills-grid">
+    <div class="skill">
+      <img src="html5logo.png" alt="HTML5 logo" />
+      <p>HTML5</p>
+    </div>
+    <div class="skill">
+      <img src="css3.png" alt="CSS3 logo" />
+      <p>CSS3</p>
+    </div>
+    <div class="skill">
+      <img src="VJSlogo.jpg" alt="JavaScript logo" />
+      <p>JavaScript</p>
+    </div>
+    <div class="skill">
+      <img src="photoshop.jpg" alt="Adobe Photoshop logo" />
+      <p>Photoshop</p>
+    </div>
+    <div class="skill">
+      <img src="vscode.png" alt="Visual Studio Code logo" />
+      <p>VS Code</p>
+    </div>
+    <div class="skill">
+      <img src="notepad++.png" alt="Notepad++ logo" />
+      <p>Notepad++</p>
+    </div>
+
+	<div class="skill">
+      <img src="mysql.png" alt="MySql logo" />
+      <p>MySQL</p>
+    </div>
+
+	<div class="skill">
+      <img src="php.png" alt="PHP logo" />
+      <p>PHP</p>
+    </div>
+
+	<div class="skill">
+      <img src="java.jpg" alt="Java logo" />
+      <p>Java</p>
+    </div>
+  </section>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutEM.html">About</a></li>
+      <li><a href="EvinPro.html">Projects</a></li>
+      <li><a href="contactEM.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <footer>
+    &copy; 2025 Evin McReynolds | Designed & Built by Me
+  </footer>
+</body>
+</html>
