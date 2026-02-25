@@ -1,173 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects | Evin McReynolds Portfolio</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: "Poppins", Arial, sans-serif;
-      background: linear-gradient(to right, #f5f5f5, #e0e0e0);
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects | Evin McReynolds Portfolio</title>
 
-    header {
-      text-align: center;
-      margin-top: 40px;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  background: linear-gradient(to right, #f5f5f5, #e0e0e0);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
 
-    h1 {
-      color: #00bfff;
-      font-size: 2.3em;
-      margin-bottom: 10px;
-    }
+header {
+  text-align: center;
+  margin-top: 40px;
+}
 
-    nav ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      gap: 25px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
+h1 {
+  color: #00bfff;
+  font-size: 2.3em;
+}
 
-    nav a {
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
-    nav a:hover {
-      color: #00bfff;
-    }
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
 
-    /* Computer image container */
-    .computer {
-      position: relative;
-      margin-top: 60px;
-      width: 950px;
-      max-width: 95%;
-    }
+nav a:hover {
+  color: #00bfff;
+}
 
-    .computer img {
-      width: 100%;
-      display: block;
-    }
+/* Laptop container */
+.computer {
+  position: relative;
+  margin-top: 60px;
+  width: 950px;
+  max-width: 95%;
+}
 
-    /* Folder icons positioned inside the screen area */
-    .project {
-      position: absolute;
-      width: 50px;
-      height: 50px;
-      text-align: center;
-      font-size: 12px;
-      color: #000;
-      font-weight: 500;
-      text-shadow: 1px 1px 2px #fff;
-      transition: transform 0.3s ease, filter 0.3s ease;
-    }
+.computer img {
+  width: 100%;
+  display: block;
+}
 
-    .project img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      cursor: pointer;
-      display: block;
-      margin: 0 auto;
-    }
+/* Invisible screen area inside the laptop */
+.screen {
+  position: absolute;
 
-    .project span {
-      display: block;
-      margin-top: 3px;
-    }
+  /* These values place icons INSIDE the laptop screen */
+  top: 20%;
+  left: 28%;
+  width: 40%;
+  height: 48%;
 
-    .project:hover {
-      transform: scale(1.1);
-      filter: drop-shadow(0 0 6px #00bfff);
-    }
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 90px;
+  justify-items: center;
+  align-items: start;
 
-    /* --- Positioning of projects on the screen --- */
-    .p1 { top: 20%; left: 33%; }
-    .p2 { top: 20%; left: 43%; }
-    .p3 { top: 20%; left: 53%; }
-    .p4 { top: 20%; left: 63%; }
-    .p5 { top: 35%; left: 33%; }
-    .p6 { top: 35%; left: 43%; }
-    .p7 { top: 35%; left: 53%; }
-    .p8 { top: 35%; left: 63%; }
-    .p9 { top: 50%; left: 38%; }
-    .p10 { top: 50%; left: 58%; }
+  padding: 15px;
+  box-sizing: border-box;
 
-    footer {
-      margin-top: 60px;
-      padding: 20px;
-      font-size: 0.9em;
-      color: #777;
-      text-align: center;
-    }
+  /* This keeps icons from spilling outside */
+  overflow: hidden;
+}
 
-    @media (max-width: 768px) {
-      .computer { width: 100%; }
-      .project { width: 35px; height: 35px; font-size: 10px; }
-    }
-  </style>
+/* Folder icons */
+.project {
+  width: 65px;
+  text-align: center;
+  font-size: 12px;
+  color: #000;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px #fff;
+  transition: transform 0.25s ease;
+}
+
+.project img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.project span {
+  display: block;
+  margin-top: 4px;
+}
+
+.project:hover {
+  transform: scale(1.1);
+}
+
+.project-details {
+  max-width: 800px;
+  margin-top: 50px;
+  padding: 0 20px;
+}
+
+.project-details h2 {
+  color: #00bfff;
+}
+
+footer {
+  margin-top: 60px;
+  padding: 20px;
+  font-size: 0.9em;
+  color: #777;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .project {
+    width: 55px;
+    font-size: 10px;
+  }
+
+  .project img {
+    width: 38px;
+    height: 38px;
+  }
+}
+</style>
 </head>
 
 <body>
-  <header>
-    <h1>Projects by Evin</h1>
-  </header>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="aboutEM.html">About</a></li>
-      <li><a href="skillsem.html">Skills</a></li>
-      <li><a href="contactem.html">Contact</a></li>
-      <li>Projects</li>
-    </ul>
-  </nav>
+<header>
+  <h1>Projects by Evin</h1>
+</header>
 
-  <section class="computer">
-    <img src="applelap.png" alt="Computer background">
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="aboutEM.html">About</a></li>
+    <li><a href="skillsem.html">Skills</a></li>
+    <li><a href="contactem.html">Contact</a></li>
+    <li>Projects</li>
+  </ul>
+</nav>
 
-    <!-- Project icons with labels -->
-    <a href="ClonePage\index.html" target="_blank" class="project p1">
+<section class="computer">
+  <img src="applelap.png" alt="Laptop background">
+
+  <!-- Invisible screen area -->
+  <div class="screen">
+
+    <a href="https://emcpower23.github.io/Volt/" target="_blank" class="project">
       <img src="folderpic.png" alt="Volt">
       <span>Volt</span>
     </a>
 
-    <a href="WOTMvmembership\index.html" target="_blank" class="project p3">
-      <img src="folderpic.png" alt="WOTM membership">
-      <span>The Barrel Club</span>
-    </a>
-
-    <a href="evolvewithjereca.com" target="_blank" class="project p4">
-      <img src="folderpic.png" alt="Evolve">
-      <span>Evolve</span>
-    </a>
-
-
-    <a href="evinsweatherapp.com" target="_blank" class="project p8">
-      <img src="folderpic.png" alt="Weather App">
+    <a href="https://emcpower23.github.io/weather/" target="_blank" class="project">
+      <img src="folderpic.png" alt="Weather">
       <span>Weather</span>
     </a>
 
-    <a href="evinsfoodproject.com" target="_blank" class="project p9">
-      <img src="folderpic.png" alt="Food">
-      <span>Food</span>
-    </a>
+    <div class="project">
+      <a href="barrel-club/index.html" target="_blank" class="project">
+      <img src="folderpic.png" alt="Barrel Club">
+      <span>Barrel Club<br>(In Dev)</span>
+      </a>
+    </div>
 
-  </section>
+    <div class="project">
+      <img src="folderpic.png" alt="React">
+      <span>React<br>Coming Soon</span>
+    </div>
 
-  <footer>
-    &copy; 2025 Evin McReynolds | Designed & Built by Me
-  </footer>
+  </div>
+</section>
+
+<div class="project-details">
+  <h2>Project Highlights</h2>
+
+  <p>
+    <strong>Volt</strong> – Responsive landing page.  
+    <br>
+    <a href="https://github.com/EMCPower23/Volt" target="_blank">View Code</a>
+  </p>
+
+  <p>
+    <strong>Weather App</strong> – API-based JavaScript weather app.  
+    <br>
+    <a href="https://github.com/EMCPower23/weather" target="_blank">View Code</a>
+  </p>
+
+  <p>
+    <strong>Barrel Club</strong> – Client project in development.  
+    <em>Code private for confidentiality.</em>
+  </p>
+</div>
+
+<footer>
+  &copy; 2025 Evin McReynolds | Designed & Built by Me
+</footer>
+
 </body>
 </html>
